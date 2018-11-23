@@ -80,6 +80,10 @@ body {
   .swiper_container {
     width: 320px;
   }
+  .wrap_for_input {
+    position: relative;
+    margin: 5px auto;
+  }
 }
 
 @media all and (min-width: 480px) {
