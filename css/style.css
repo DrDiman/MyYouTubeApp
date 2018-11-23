@@ -28,8 +28,8 @@ body {
 
 .wrap_for_input::before {
   position: absolute;
-  top: 12px;
-  left: 15px;
+  top: 24%;
+  left: 4%;
   content: "\f002";
   font-family: Fontawesome;
   font-size: 25px;
@@ -84,6 +84,19 @@ body {
     position: relative;
     margin: 5px auto;
   }
+  
+.wrap_for_input::before {
+   font-size: 15px;
+}
+
+  .input_search {
+    width: 100%;
+    padding: 5px 5px 5px 45px;
+    border-radius: 5px;
+    line-height: 15px;
+    font-size: 15px;
+  }
+
 }
 
 @media all and (min-width: 480px) {
