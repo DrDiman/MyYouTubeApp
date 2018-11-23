@@ -1,0 +1,220 @@
+@font-face {
+  font-family: "Fontawesome";
+  src: url("../font/fontawesome-webfont.woff2") format("woff2");
+  font-weight: 900;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  background-color: #222222;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-auto-flow: row;
+  justify-content: center;
+  align-content: space-around;
+  align-items: start;
+}
+
+.wrap_for_input {
+  position: relative;
+  width: 70%;
+  margin: 10px auto;
+}
+
+.wrap_for_input::before {
+  position: absolute;
+  top: 12px;
+  left: 15px;
+  content: "\f002";
+  font-family: Fontawesome;
+  font-size: 25px;
+  color: rebeccapurple;
+}
+
+.input_search {
+  width: 100%;
+  padding: 5px 5px 5px 45px;
+  border-radius: 5px;
+  line-height: 35px;
+  font-size: 25px;
+}
+
+.swiper_container {
+  position: relative;
+  
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 5px;
+
+  overflow-x: scroll;
+
+  transform: scale(0.99);
+  transition: all .2s;
+
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/*убирает скролл хрома*/
+.swiper_container::-webkit-scrollbar {
+  width: 0;
+}
+
+.active_container {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+  transform: scale(1);
+}
+
+@media all and (max-width: 480px) {
+  .swiper_container {
+    width: 320px;
+  }
+}
+
+@media all and (min-width: 480px) {
+  .swiper_container {
+    width: 320px;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .swiper_container {
+    width: 645px;
+  }
+}
+
+@media all and (min-width: 1295px) {
+  .swiper_container {
+    width: 1295px;
+  }
+}
+
+.swiper_slide {
+  position: relative;
+  background-color: azure;
+  width: 320px;
+  height: 420px;
+  overflow: hidden;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.myTitle {
+  position: absolute;
+  top: 10px;
+  background-color: rgba(0, 128, 0, 0.514);
+}
+
+.slide_image {
+  width: 100%;
+}
+
+.desription_text {
+  margin: 15px 0;
+  height: 95px;
+}
+
+.slide_link {
+  text-decoration: none;
+  color: white;
+}
+
+.chanel,
+.date_of_publish,
+.count_of_view {
+  position: relative;
+  margin: 21px 0;
+  height: 18px;
+  overflow: hidden;
+}
+
+.chanel::after {
+  content: "\f183";
+  position: absolute;
+  left: 25px;
+  font-family: Fontawesome;
+  font-size: 18px;
+}
+
+.date_of_publish::after {
+  content: "\f073";
+  position: absolute;
+  left: 25px;
+  font-family: Fontawesome;
+  font-size: 18px;
+}
+
+.count_of_view::after {
+  content: "\f06e";
+  position: absolute;
+  left: 25px;
+  font-family: Fontawesome;
+  font-size: 18px;
+}
+
+.swiper_pagination {
+  position: relative;
+  top: 10%;
+  width: 95%;
+  overflow: hidden;
+  margin: 0 auto;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  grid-gap: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.page_of_slide {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid white;
+  background-color: white;
+  transition: all .2s;
+  transform: scale(0.85);
+  color: white;
+}
+
+.page_of_slide:hover {
+  transform: scale(1);
+  background-color: rebeccapurple;
+}
+
+.page_of_slide:active {
+  transform: scale(0.85);
+  background-color: rebeccapurple;
+}
+
+.active_slide {
+  transform: scale(1);
+  background-color: rebeccapurple;
+}
+
+.number_of_page {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.page_of_slide:hover .number_of_page,
+.active_slide .number_of_page {
+  display: initial;
+}
