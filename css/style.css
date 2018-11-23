@@ -23,7 +23,6 @@ body {
 
 .wrap_for_input {
   position: relative;
-  width: 70%;
   margin: 10px auto;
 }
 
@@ -51,6 +50,8 @@ body {
   display: grid;
   grid-auto-flow: column;
   grid-gap: 5px;
+
+  margin: 5px auto;
 
   overflow-x: scroll;
 
